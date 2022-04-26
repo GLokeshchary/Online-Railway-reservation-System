@@ -12,11 +12,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
 public class Passenger {
-	@Id
+	
 	private String passengerId;
-	private long pnr;
     private String passenger_name;
     private int age;
     private long contactNumber;
@@ -24,4 +22,5 @@ public class Passenger {
     private String email;
     private LocalDate dateOfJourney;
     private int seat_no; 
+    
 }

@@ -18,6 +18,10 @@ spring:
         uri: lb://ADMIN-SERVICE
         predicates:
         - Path=/admin/**
+      - id: BOOKING-SERVICE
+        uri: lb://BOOKING-SERVICE
+        predicates:
+        - Path=/customer/**
           
 
 eureka:

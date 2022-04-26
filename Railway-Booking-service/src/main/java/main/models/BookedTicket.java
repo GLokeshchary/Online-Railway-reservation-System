@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 public class BookedTicket {
 	@Id
 	private String bookId;
-	private Long pnr;
     private Ticket ticket;
     private Long transactional_id;
     private Long account_no;

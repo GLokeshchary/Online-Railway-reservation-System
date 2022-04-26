@@ -1,6 +1,6 @@
 package main.service;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -18,7 +18,7 @@ import main.models.Seat;
 import main.models.Ticket;
 import main.models.Train;
 import main.respository.BookedTicketRepository;
-import main.respository.TicketRepository;
+
 
 @Service
 public class BookingService {
@@ -27,10 +27,9 @@ public class BookingService {
 	private BookedTicketRepository bookedTicketRepository;
 
 	@Autowired
-	private TicketRepository ticketRepository;
-
-	@Autowired
 	private RestTemplate restTemplate;
+
+	// FIND ALL THE BOOKINGS
 
 	public List<BookedTicket> findAllBookings() throws NoSuchBookingsException {
 		List<BookedTicket> bookings = bookedTicketRepository.findAll();
@@ -40,15 +39,9 @@ public class BookingService {
 		return bookings;
 	}
 
-	public BookedTicket getBookingByPNR(Long pnr) throws InvalidPNRException {
-		List<BookedTicket> bookings = bookedTicketRepository.findAll();
-		if (bookings.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
-			throw new InvalidPNRException("NO TICKET WITH" + pnr + "EXISTS");
-		}
-		return bookings.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
-	}
 
-	// generate random pnr
+	// GENERATE A RANDOM PNR NUMBER
+
 	public long generatePNR() {
 
 		Random rnd = new Random();
@@ -57,28 +50,13 @@ public class BookingService {
 		return lo;
 	}
 
-	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException {
-		List<Ticket> tickets = ticketRepository.findAll();
-
-		if (tickets.isEmpty()) {
-			throw new TicketNotFoundException("TICKET NOT FOUND");
-		}
-		return tickets;
-	}
-
-	public Ticket getPassengersTicketByPNR(long pnr) throws InvalidPNRException {
-		List<Ticket> tickets = ticketRepository.findAll();
-		if (tickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
-			throw new InvalidPNRException("NO TICKET WITH" + pnr + "EXISTS");
-		}
-		return tickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
-	}
+	// BOOKING A TICKET
 
 	public BookedTicket bookTicketByTrainNo(String trainNo, BookedTicket bookedTicket, String coachName)
 			throws InvalidCoachNameException {
 		Train train = restTemplate.getForObject("https://TRAIN-SERVICE/trains/public/getTrainByTrainNo/" + trainNo,
 				Train.class);
-
+		
 		bookedTicket.getTicket().setPnr(generatePNR());
 		bookedTicket.getTicket().setTrain_no(trainNo);
 		bookedTicket.getTicket().setTrain_name(train.getTrainName());
@@ -95,18 +73,44 @@ public class BookingService {
 		Seat seat = train.getClasses().get(coachName);
 		double amountPerSeat = seat.getPrice();
 
-		bookedTicket.setPnr(generatePNR());
-		//from payment microservice
-		bookedTicket.setTransactional_id(04L);
+		// from payment
+		/*bookedTicket.setTransactional_id(04L);
 		bookedTicket.setAccount_no(14L);
 		bookedTicket.setEmail_address("lokesh@gmail.com");
 		bookedTicket.setStatus("confirmed");
-		bookedTicket.setBooking_time(LocalDateTime.now());
-		
-		double size=bookedTicket.getTicket().getPassengers().size();
-		bookedTicket.setAmount(amountPerSeat*size);
+		bookedTicket.setBooking_time(LocalDateTime.now());*/
+
+		double size = bookedTicket.getTicket().getPassengers().size();
+		bookedTicket.setAmount(amountPerSeat * size);
 		bookedTicketRepository.save(bookedTicket);
 		return bookedTicket;
+	}
+
+	//GET ALL PASEENGERS TICKETS
+	
+	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException {
+		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
+
+		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
+
+		if (tickets.isEmpty()) {
+			throw new TicketNotFoundException("TICKET NOT FOUND");
+		}
+		return tickets;
+	}
+	
+	//GET PASSNGERS TICKET BY PNR
+
+	public Ticket getPassengersTicketByPNR(long pnr) throws InvalidPNRException {
+		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
+
+		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
+		
+		if(tickets.stream().noneMatch(data->data.getPnr().equals(pnr))) {
+			throw new InvalidPNRException();
+		}
+		return tickets.stream().filter(data->data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);	
+		
 	}
 
 }

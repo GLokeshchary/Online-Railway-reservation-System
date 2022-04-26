@@ -25,18 +25,24 @@ public class TrainController {
 	
 	@Autowired
 	private TrainService trainService;
-	//save train
+	
+	// SAVE A TRAIN IN DATABASE
+	
 	@PostMapping("/public/addTrain")
 	public Train addTrain(@RequestBody Train train) {
 		return trainService.addTrain(train);
 		
 	}
-	//GET all trains
+	
+	// GET ALL THE TRAINS FROM DATABASE
+	
 	@GetMapping("/public/getAllTrains")
 	public List<Train> getAllTrains() throws NoTrainExistException{
 		return trainService.getAllTrains();
 	}
-	//CAlling get all trains through micro service communication
+	
+	// METHOD USED FOR MICRO SERVICE COMMUNICATON
+	
 	@GetMapping("/public/findAllTrains")
 	public Trains findAllTrains() throws NoTrainExistException {
 		List<Train> trainList=trainService.getAllTrains();
@@ -44,28 +50,34 @@ public class TrainController {
 		trains.setList(trainList);
 		return trains;
 	}
-	//get all the trains between two stations
+	
+	// GET LIST OF TRAINS BETWEEN ORIGIN AND DESTINATION
+	
 	@GetMapping("/public/getTrainBetween/{origin}:{destination}")
 	public List<Train> getTrainBetweenTwoStations(@PathVariable String origin,@PathVariable String destination){
 		
 		 return trainService.getTrainBetweenTwoStations(origin, destination);
 	}
 	
-	//get train by train no
+	// GET TRAIN BY TRAIN NO IN DATABASE
+	
 	@GetMapping("/public/getTrainByTrainNo/{trainNo}")
 	public Train getTrainByTrainNo(@PathVariable String trainNo) {
 		
 		return trainService.getTrainByTrainNo(trainNo);
 	}
 	
-	//Delete Train
+	// DELETE TRAIN BY TRAIN NO IN THE DATABASE
+	
 	@DeleteMapping("/public/deleteTrainByTrainNo/{trainNo}")
 	public String deleteTrain(@PathVariable String trainNo) throws InvalidTrainNoException {
 		
 		trainService.deleteTrainByTrainNo(trainNo);
 		return "Deleted SuccessFully";
 	}
-	//Update Train
+	
+	//UPDATE A TRAIN IN DATABASE
+	
 	@PutMapping("/public/updateTrainByTrainNo/{trainNo}")
 	public Train updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
 		 return trainService.updateTrain(train);

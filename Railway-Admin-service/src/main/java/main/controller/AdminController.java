@@ -21,24 +21,31 @@ public class AdminController {
 	
 	@Autowired
 	private AdminService adminService;
-	//calling TRAIN-SERVICE to get all List of Trains
+	
+	// GET ALL THE TRAINS FROM TRAIN SERVICE USING REST TEMPLATE 
+	
 	@GetMapping("/admin/findAllTrains")
 	public List<Train> findAllTrains(){
 		return adminService.findAllTrains();
 	}
-	//saving a train
+	
+	// SAVE TRAIN IN THE TRAIN SERVICE USING REST TEMPLATE IN ADMIN SERVICE
+	
 	@PostMapping(value="/admin/saveTrain",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
 	public Train saveTrain(@RequestBody Train train) {
 		 adminService.saveTrain(train);
 		 return train;
 	}
-	//updating a train
+	
+	// UPDATE TRAIN IN THE TRAIN SERVICE USING REST TEMPLATE IN ADMIN SERVICE
+	
 	@PutMapping(value="/admin/updateTrainByTrainNo/{trainNo}")
 	public String updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
 		return adminService.updateTrain(train,trainNo);
 	}
 	
-	//Delete Train
+	// DELETE TRAIN WITH TRAIN NO IN TRAIN SERVICE USING REST TEMPLATE
+	
 	@DeleteMapping("/admin/deleteTrainByTrainNo/{trainNo}")
 	public String deleteTrainByTrainNo(@PathVariable String trainNo) {
 		return adminService.deleteTrainByTrainNo(trainNo);
