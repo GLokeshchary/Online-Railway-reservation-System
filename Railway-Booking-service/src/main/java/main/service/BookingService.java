@@ -19,7 +19,6 @@ import main.models.Ticket;
 import main.models.Train;
 import main.respository.BookedTicketRepository;
 
-
 @Service
 public class BookingService {
 
@@ -39,7 +38,6 @@ public class BookingService {
 		return bookings;
 	}
 
-
 	// GENERATE A RANDOM PNR NUMBER
 
 	public long generatePNR() {
@@ -56,7 +54,7 @@ public class BookingService {
 			throws InvalidCoachNameException {
 		Train train = restTemplate.getForObject("https://TRAIN-SERVICE/trains/public/getTrainByTrainNo/" + trainNo,
 				Train.class);
-		
+
 		bookedTicket.getTicket().setPnr(generatePNR());
 		bookedTicket.getTicket().setTrain_no(trainNo);
 		bookedTicket.getTicket().setTrain_name(train.getTrainName());
@@ -74,11 +72,12 @@ public class BookingService {
 		double amountPerSeat = seat.getPrice();
 
 		// from payment
-		/*bookedTicket.setTransactional_id(04L);
-		bookedTicket.setAccount_no(14L);
-		bookedTicket.setEmail_address("lokesh@gmail.com");
-		bookedTicket.setStatus("confirmed");
-		bookedTicket.setBooking_time(LocalDateTime.now());*/
+		/*
+		 * bookedTicket.setTransactional_id(04L); bookedTicket.setAccount_no(14L);
+		 * bookedTicket.setEmail_address("lokesh@gmail.com");
+		 * bookedTicket.setStatus("confirmed");
+		 * bookedTicket.setBooking_time(LocalDateTime.now());
+		 */
 
 		double size = bookedTicket.getTicket().getPassengers().size();
 		bookedTicket.setAmount(amountPerSeat * size);
@@ -86,8 +85,8 @@ public class BookingService {
 		return bookedTicket;
 	}
 
-	//GET ALL PASEENGERS TICKETS
-	
+	// GET ALL PASEENGERS TICKETS
+
 	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
@@ -98,19 +97,61 @@ public class BookingService {
 		}
 		return tickets;
 	}
-	
-	//GET PASSNGERS TICKET BY PNR
+
+	// GET PASSNGERS TICKET BY PNR
 
 	public Ticket getPassengersTicketByPNR(long pnr) throws InvalidPNRException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
 		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
-		
-		if(tickets.stream().noneMatch(data->data.getPnr().equals(pnr))) {
+
+		if (tickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
 			throw new InvalidPNRException();
 		}
-		return tickets.stream().filter(data->data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);	
+		return tickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
+
+	}
+
+	// GET BOOKING TICKETS WITH BOOKING ID
+
+	public BookedTicket bookedTicketByBookId(String bookId) throws NoSuchBookingsException {
+		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
+
+		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
+			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
+		}
+		return bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
+				.get(0);
+	}
+
+	// UPDATE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
+
+	public BookedTicket updateBookedTicketByBookId(String bookId, BookedTicket bookedTicket) throws NoSuchBookingsException {
+
+		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
+
+		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
+			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
+		}
+		bookedTicket= bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
+				.get(0);
 		
+		return bookedTicket;
+	}
+	
+	// DELETE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
+
+	public String deleteBookedTicketByBookId(String bookId) throws NoSuchBookingsException {
+		
+		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
+		
+		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
+			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
+		}
+	    bookedTicketRepository.delete(bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
+				.get(0));
+		
+		return "DELETED BOOKING WITH"+bookId+"SUCCESSFULLY";
 	}
 
 }
