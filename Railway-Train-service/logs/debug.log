@@ -1,28 +1,16 @@
-2022-04-29 17:07:39 [main] INFO  main.RailwayTrainServiceApplication -
-				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 6652 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
-2022-04-29 17:07:39 [main] DEBUG main.RailwayTrainServiceApplication -
+2022-04-29 19:42:19 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 14312 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-04-29 19:42:19 [main] DEBUG main.RailwayTrainServiceApplication -
 				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-04-29 17:07:39 [main] INFO  main.RailwayTrainServiceApplication -
+2022-04-29 19:42:19 [main] INFO  main.RailwayTrainServiceApplication -
 				No active profile set, falling back to 1 default profile: "default"
-2022-04-29 17:07:44 [main] INFO  main.RailwayTrainServiceApplication -
-				Started RailwayTrainServiceApplication in 5.342 seconds (JVM running for 6.328)
-2022-04-29 17:08:05 [main] INFO  main.RailwayTrainServiceApplication -
-				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 12924 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
-2022-04-29 17:08:05 [main] DEBUG main.RailwayTrainServiceApplication -
-				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-04-29 17:08:05 [main] INFO  main.RailwayTrainServiceApplication -
-				No active profile set, falling back to 1 default profile: "default"
-2022-04-29 17:08:10 [main] INFO  main.RailwayTrainServiceApplication -
-				Started RailwayTrainServiceApplication in 5.27 seconds (JVM running for 6.07)
-2022-04-29 18:05:23 [main] INFO  main.RailwayTrainServiceApplication -
-				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 7240 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
-2022-04-29 18:05:24 [main] DEBUG main.RailwayTrainServiceApplication -
-				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-04-29 18:05:24 [main] INFO  main.RailwayTrainServiceApplication -
-				No active profile set, falling back to 1 default profile: "default"
-2022-04-29 18:05:29 [main] INFO  main.RailwayTrainServiceApplication -
-				Started RailwayTrainServiceApplication in 5.974 seconds (JVM running for 6.839)
-2022-04-29 18:05:51 [http-nio-1111-exec-1] DEBUG main.controller.TrainController -
-				Exception
-2022-04-29 18:05:53 [http-nio-1111-exec-1] DEBUG main.service.TrainService -
-				Exception
+2022-04-29 19:42:26 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 8.108 seconds (JVM running for 9.404)
+2022-04-29 19:42:38 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-04-29 19:42:38 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and save dto database
+2022-04-29 19:43:43 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-04-29 19:43:43 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and save dto database

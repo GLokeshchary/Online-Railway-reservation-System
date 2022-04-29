@@ -48,7 +48,7 @@ public class TrainService {
 		if(trains.isEmpty()) {
 			throw new NoTrainExistException("No Trains Found");
 		}
-		log.info("Not empty and save dto database");
+		log.info("Not empty and return list of trains");
 		return trains;
 	}
 
