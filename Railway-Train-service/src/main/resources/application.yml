@@ -22,3 +22,13 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   
+springdoc:
+  swagger-ui:
+    path: /openapi/swagger-ui.html
+    
+  api-docs:
+    path: /openapi/v3/api-docs
+  packages-to-scan:
+  - main
+  paths-to-match:
+  - /**
