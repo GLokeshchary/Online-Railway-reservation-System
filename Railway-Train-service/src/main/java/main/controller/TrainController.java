@@ -1,7 +1,6 @@
 package main.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,22 +14,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 import main.exception.InvalidTrainNoException;
 import main.exception.NoTrainExistException;
+import main.exception.StationNotExistException;
 import main.models.Train;
 import main.models.Trains;
 import main.service.TrainService;
 
 @RestController
 @RequestMapping("/trains")
+
 public class TrainController {
+	
+	
 	
 	@Autowired
 	private TrainService trainService;
+	
+	
 	
 	// SAVE A TRAIN IN DATABASE
 	
 	@PostMapping("/public/addTrain")
 	public Train addTrain(@RequestBody Train train) {
+		
+		
 		return trainService.addTrain(train);
+		
 		
 	}
 	
@@ -38,6 +46,8 @@ public class TrainController {
 	
 	@GetMapping("/public/getAllTrains")
 	public List<Train> getAllTrains() throws NoTrainExistException{
+		
+		
 		return trainService.getAllTrains();
 	}
 	
@@ -54,7 +64,7 @@ public class TrainController {
 	// GET LIST OF TRAINS BETWEEN ORIGIN AND DESTINATION
 	
 	@GetMapping("/public/getTrainBetween/{origin}:{destination}")
-	public List<Train> getTrainBetweenTwoStations(@PathVariable String origin,@PathVariable String destination){
+	public List<Train> getTrainBetweenTwoStations(@PathVariable String origin,@PathVariable String destination) throws StationNotExistException{
 		
 		 return trainService.getTrainBetweenTwoStations(origin, destination);
 	}
@@ -80,7 +90,7 @@ public class TrainController {
 	
 	@PutMapping("/public/updateTrainByTrainNo/{trainNo}")
 	public Train updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
-		 return trainService.updateTrain(train);
+		 return trainService.updateTrain(train,trainNo);
 	}
 	
 }

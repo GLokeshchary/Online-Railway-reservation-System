@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import lombok.extern.slf4j.Slf4j;
 import main.exception.InvalidCoachNameException;
 import main.exception.InvalidPNRException;
 import main.exception.NoSuchBookingsException;
@@ -20,6 +21,7 @@ import main.models.Train;
 import main.respository.BookedTicketRepository;
 
 @Service
+@Slf4j
 public class BookingService {
 
 	@Autowired
@@ -31,17 +33,21 @@ public class BookingService {
 	// FIND ALL THE BOOKINGS
 
 	public List<BookedTicket> findAllBookings() throws NoSuchBookingsException {
+		
 		List<BookedTicket> bookings = bookedTicketRepository.findAll();
+		log.info("checking if list of booked tickets is empty or not");
 		if (bookings.isEmpty()) {
 			throw new NoSuchBookingsException("NO BOOKINGS FOUND");
 		}
+		log.info("getting list of booked tickets");
 		return bookings;
 	}
 
 	// GENERATE A RANDOM PNR NUMBER
 
 	public long generatePNR() {
-
+        
+		log.info("generating a random pnr");
 		Random rnd = new Random();
 		int number = rnd.nextInt(999999);
 		long lo = Long.parseLong(String.format("%06d", number));
@@ -52,6 +58,7 @@ public class BookingService {
 
 	public BookedTicket bookTicketByTrainNo(String trainNo, BookedTicket bookedTicket, String coachName)
 			throws InvalidCoachNameException {
+		log.info("getting train with"+trainNo+"with help of train service");
 		Train train = restTemplate.getForObject("https://TRAIN-SERVICE/trains/public/getTrainByTrainNo/" + trainNo,
 				Train.class);
 
@@ -82,6 +89,7 @@ public class BookingService {
 		double size = bookedTicket.getTicket().getPassengers().size();
 		bookedTicket.setAmount(amountPerSeat * size);
 		bookedTicketRepository.save(bookedTicket);
+		log.info("tickets booked");
 		return bookedTicket;
 	}
 
@@ -90,11 +98,14 @@ public class BookingService {
 	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
+		log.info("getting list of passengers tikets from bookedticket");
 		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
 
+		log.info("checking if tickets empty or not");
 		if (tickets.isEmpty()) {
 			throw new TicketNotFoundException("TICKET NOT FOUND");
 		}
+		log.info("return list of tickets");
 		return tickets;
 	}
 
@@ -103,11 +114,15 @@ public class BookingService {
 	public Ticket getPassengersTicketByPNR(long pnr) throws InvalidPNRException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
+		
 		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
 
+		log.info("checking if its matching pnr or not");
 		if (tickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
 			throw new InvalidPNRException();
 		}
+		
+		log.info("getting passengertickets by "+pnr);
 		return tickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
 
 	}

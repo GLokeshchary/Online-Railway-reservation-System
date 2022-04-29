@@ -86,7 +86,7 @@ class TrainServiceTest {
 		train.setQuota("GENERAL");
 		train.setDepatureTime(LocalTime.of(7, 30, 00));
 		
-		Train actualTrain=trainService.updateTrain(train);
+		Train actualTrain=trainService.updateTrain(train,train.getTrainNo());
 		Train excpetedTrain=new Train();
 		excpetedTrain.setQuota("GENERAL");
 		excpetedTrain.setDepatureTime(LocalTime.of(7, 30, 00));

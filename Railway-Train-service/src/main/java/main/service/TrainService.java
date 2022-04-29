@@ -8,15 +8,20 @@ import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import main.exception.InvalidTrainNoException;
 import main.exception.NoTrainExistException;
+import main.exception.StationNotExistException;
 import main.models.Train;
 import main.repository.TrainRepository;
 
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
+@Slf4j
 public class TrainService {
+	
 	
 	@Autowired
 	TrainRepository trainRepository;
@@ -24,8 +29,12 @@ public class TrainService {
 	// SAVE A TRAIN IN DATABASE
 
 	public Train addTrain(Train train) {
+		
+		log.info("saving train data in DB");
 		trainRepository.save(train);
+		log.info("Saved in db");
 		return train;
+		
 		
 	}
 	
@@ -33,10 +42,13 @@ public class TrainService {
 
 	public List<Train> getAllTrains() throws NoTrainExistException {
 		
+				
 		List<Train> trains = trainRepository.findAll();
+		log.info("checking if its empty or not");
 		if(trains.isEmpty()) {
 			throw new NoTrainExistException("No Trains Found");
 		}
+		log.info("Not empty and save dto database");
 		return trains;
 	}
 
@@ -45,6 +57,7 @@ public class TrainService {
 	public void deleteTrainByTrainNo(String trainNo) throws InvalidTrainNoException {
 		
 		List<Train> trains=trainRepository.findAll();
+		log.info("checking if"+trainNo+"exists or not");
 		try {
 			if(trains.stream().noneMatch(p->p.getTrainNo().equals(trainNo))) {
 				throw new InvalidTrainNoException("TRAIN WITH TRAIN NO DOESNOT EXIST");
@@ -53,22 +66,30 @@ public class TrainService {
 			e.printStackTrace();
 		}
 		Train train = trains.stream().filter(data->data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).get(0);
+		log.info("deleted train by ",trainNo);
 		trainRepository.delete(train);
 		
 	}
 
 	//UPDATE A TRAIN IN DATABASE
 	
-	public Train updateTrain(Train train) {
-		
+	public Train updateTrain(Train train,String trainNo) {
+		log.info("updating train with",trainNo);
+		train=trainRepository.findAll().stream().filter(data->data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).get(0);
 	    trainRepository.save(train);
+	    log.info("updated train with",trainNo);
 		return train;
 	}
 	
 	// GET LIST OF TRAINS BETWEEN ORIGIN AND DESTINATION
 	
-	public List<Train> getTrainBetweenTwoStations(String origin,String destination){
+	public List<Train> getTrainBetweenTwoStations(String origin,String destination) throws StationNotExistException{
 		List<Train> list=trainRepository.findAll();
+		log.info("checking trains between",origin,destination);
+		if(list.stream().noneMatch(data->data.getDepatureStation().equals(origin) && data.getArrivalStation().equals(destination))) {
+			throw new StationNotExistException("DOESNOT EXIST");
+		}
+		log.info("getting list of trains between",origin,destination);
 		return list.stream().filter(data->data.getDepatureStation().equals(origin) && data.getArrivalStation().equals(destination)).collect(Collectors.toList());
 	}
 	
@@ -76,7 +97,7 @@ public class TrainService {
 	
 	public Train getTrainByTrainNo(String trainNo) {
 		List<Train> trainlist=trainRepository.findAll();
-		
+		log.info("checking train with",trainNo);
 		try {
 			if(trainlist.stream().filter(data->data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).isEmpty())
 			{
@@ -85,6 +106,8 @@ public class TrainService {
 		} catch (NoTrainExistException e) {
 			e.printStackTrace();
 		}
+		
+		log.info("get train with",trainNo);
 		
 		return trainlist.stream().filter(data->data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).get(0);
 	}
