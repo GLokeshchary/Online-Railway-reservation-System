@@ -85,11 +85,12 @@ public class TrainService {
 	
 	public List<Train> getTrainBetweenTwoStations(String origin,String destination) throws StationNotExistException{
 		List<Train> list=trainRepository.findAll();
-		log.info("checking trains between",origin,destination);
+		log.info("checking trains between "+origin+" and "+destination);
 		if(list.stream().noneMatch(data->data.getDepatureStation().equals(origin) && data.getArrivalStation().equals(destination))) {
-			throw new StationNotExistException("DOESNOT EXIST");
+			throw new StationNotExistException("STATION DOESNOT EXISTS");
 		}
-		log.info("getting list of trains between",origin,destination);
+		
+		log.info("getting list of trains between "+origin+" and "+destination);
 		return list.stream().filter(data->data.getDepatureStation().equals(origin) && data.getArrivalStation().equals(destination)).collect(Collectors.toList());
 	}
 	

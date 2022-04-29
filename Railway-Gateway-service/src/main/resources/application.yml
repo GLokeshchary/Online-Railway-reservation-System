@@ -14,15 +14,44 @@ spring:
         uri: lb://TRAIN-SERVICE
         predicates:
         - Path=/trains/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: TRAIN-SERVICE
+            fallbackuri: forward:/trainServiceFallBack
       - id: ADMIN-SERVICE
         uri: lb://ADMIN-SERVICE
         predicates:
         - Path=/admin/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: ADMIN-SERVICE
+            fallbackuri: forward:/adminServiceFallBack
       - id: BOOKING-SERVICE
         uri: lb://BOOKING-SERVICE
         predicates:
         - Path=/customer/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: BOOKING-SERVICE
+            fallbackuri: forward:/bookingServiceFallBack
+ 
           
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
 eureka:
   client:
@@ -32,4 +61,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+    
     

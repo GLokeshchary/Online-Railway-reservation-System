@@ -6,3 +6,33 @@
 				No active profile set, falling back to 1 default profile: "default"
 2022-04-29 19:46:08 [main] INFO  main.RailwayAdminServiceApplication -
 				Started RailwayAdminServiceApplication in 6.682 seconds (JVM running for 7.418)
+2022-04-29 21:40:11 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 1300 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-04-29 21:40:11 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-29 21:40:11 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-04-29 21:40:17 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 6.761 seconds (JVM running for 7.573)
+2022-04-29 23:19:57 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 5720 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-04-29 23:19:57 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-29 23:19:57 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-04-29 23:20:03 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 6.975 seconds (JVM running for 8.451)
+2022-04-29 23:24:01 [http-nio-2222-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-04-29 23:24:10 [http-nio-2222-exec-3] INFO  main.service.AdminService -
+				updating a train with12702 through admin service
+2022-04-29 23:24:24 [http-nio-2222-exec-4] INFO  main.service.AdminService -
+				deleting a train with12702 through admin service
+2022-04-29 23:25:17 [http-nio-2222-exec-7] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-04-29 23:26:18 [http-nio-2222-exec-9] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-04-29 23:46:58 [http-nio-2222-exec-10] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-04-29 23:48:07 [http-nio-2222-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
