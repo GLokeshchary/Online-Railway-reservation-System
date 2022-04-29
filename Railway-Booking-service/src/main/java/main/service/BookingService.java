@@ -132,9 +132,11 @@ public class BookingService {
 	public BookedTicket bookedTicketByBookId(String bookId) throws NoSuchBookingsException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
+		log.info("checking if its matches with "+ bookId+"or not");
 		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
 			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
 		}
+		log.info("return list of bookedtickets");
 		return bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
 				.get(0);
 	}
@@ -145,12 +147,14 @@ public class BookingService {
 
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
+		log.info("checking if its matches with "+ bookId+"or not");
 		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
 			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
 		}
 		bookedTicket= bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
 				.get(0);
 		
+		log.info("updating booking with ",bookId);
 		return bookedTicket;
 	}
 	
@@ -160,12 +164,14 @@ public class BookingService {
 		
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 		
+		log.info("checking if its matches with "+ bookId+"or not");
 		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
 			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
 		}
 	    bookedTicketRepository.delete(bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
 				.get(0));
 		
+	    log.info("deleteing booking with",bookId);
 		return "DELETED BOOKING WITH"+bookId+"SUCCESSFULLY";
 	}
 
