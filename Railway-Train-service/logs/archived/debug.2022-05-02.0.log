@@ -1,0 +1,48 @@
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				Saved in db
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				checking train with
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				get train with
+2022-05-02 14:33:31 [main] INFO  main.service.TrainService -
+				updating train with
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				Saved in db
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				checking train with
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				get train with
+2022-05-02 14:35:41 [main] INFO  main.service.TrainService -
+				updating train with
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				Saved in db
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				checking train with
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				get train with
+2022-05-02 14:39:26 [main] INFO  main.service.TrainService -
+				updating train with
