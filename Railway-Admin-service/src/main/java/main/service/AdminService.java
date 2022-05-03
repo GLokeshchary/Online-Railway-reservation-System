@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import lombok.extern.slf4j.Slf4j;
+import main.models.Bookings;
+import main.models.PassengersList;
 import main.models.Train;
 import main.models.Trains;
 
@@ -48,6 +50,20 @@ public class AdminService {
 		log.info("deleting a train with"+trainNo+" through admin service");
 		restTemplate.delete("https://TRAIN-SERVICE/trains/public/deleteTrainByTrainNo/" + trainNo);
 		return "DELETED SUCCESSFULLY";
+	}
+	
+	// FIND ALL BOOKINGS FROM BOOKING MICROSERVICE
+
+	public Bookings findAllBookings() {
+		Bookings bookings=restTemplate.getForObject("https://BOOKING-SERVICE/customer/findAllBookings", Bookings.class);
+		return bookings;
+	}
+	
+	// GET ALL PASSENERS TICKET FROM BOOKING SERVICE
+	
+	public PassengersList getAllPassengersTicket() {
+		PassengersList list=restTemplate.getForObject("https://BOOKING-SERVICE/customer/findAllPassengersTiket", PassengersList.class);
+		return list;
 	}
 
 }

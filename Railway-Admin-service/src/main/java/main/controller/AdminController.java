@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import main.models.Bookings;
+import main.models.PassengersList;
 import main.models.Train;
 import main.service.AdminService;
 
@@ -49,6 +52,20 @@ public class AdminController {
 	@DeleteMapping("/admin/deleteTrainByTrainNo/{trainNo}")
 	public String deleteTrainByTrainNo(@PathVariable String trainNo) {
 		return adminService.deleteTrainByTrainNo(trainNo);
+	}
+	
+	// GET ALL BOOKED TICKETS FROM BOOKING SERVICE
+	
+	@GetMapping("/admin/getAllBookings")
+	public Bookings findAllBookings() {
+		return adminService.findAllBookings();
+	}
+	
+	// GET ALL PASSENGERS LIST FROM BOOKING SERVICE
+	
+	@GetMapping("/admin/getAllPassengersTicket")
+	public PassengersList getAllPassengersTicket() {
+		return adminService.getAllPassengersTicket();
 	}
 
 }

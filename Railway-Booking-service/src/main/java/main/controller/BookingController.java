@@ -17,6 +17,8 @@ import main.exception.InvalidPNRException;
 import main.exception.NoSuchBookingsException;
 import main.exception.TicketNotFoundException;
 import main.models.BookedTicket;
+import main.models.Bookings;
+import main.models.PassengersList;
 import main.models.Ticket;
 import main.service.BookingService;
 
@@ -34,11 +36,31 @@ public class BookingController {
 		return bookingService.findAllBookings();
 	}
 	
+	// GET ALL BOOKINGS USEFUL IN ADMIN SERVICE
+	
+	@GetMapping("/findAllBookings")
+	public Bookings findAllBookings() throws NoSuchBookingsException {
+		List<BookedTicket> list = bookingService.findAllBookings();
+		Bookings bookings =new Bookings();
+		bookings.setBookedTickets(list);
+		return bookings;
+	}
+	
 	// GET ALL PASSENGERS TICKETS
 	
 	@GetMapping("/getAllPassengersTicket")
 	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException{
 		return bookingService.getAllPassengersTicket();
+	}
+	
+	// GET ALL PASSENGERS TICKETS FOR ADMIN SERVICE
+	
+	@GetMapping("/findAllPassengersTiket")
+	public PassengersList findAllPassengersTiket() throws TicketNotFoundException {
+		List<Ticket> list = bookingService.getAllPassengersTicket();
+		PassengersList passengersList=new PassengersList();
+		passengersList.setTickets(list);
+		return passengersList;
 	}
 	
 	// GET PASSENGERS TICKETS BY PNR

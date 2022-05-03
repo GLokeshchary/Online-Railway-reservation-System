@@ -1,6 +1,7 @@
 package main.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.any;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -68,14 +70,14 @@ class TrainServiceTest {
 		assertThrows(IndexOutOfBoundsException.class,()->trainService.getTrainByTrainNo("id"));	
 	}
 	@Test
-	@Disabled
 	void trainByTrainNoTest() throws NoTrainExistException {
 		
+		String random=RandomStringUtils.random(5, true, false);
 		Train train= new Train();
 		train.setQuota("GENERAL");
 		train.setDepatureTime(LocalTime.of(7, 30, 00));
 		
-		when(trainRepository.findAll().stream().filter(data->data.getTrainNo().equals(toString())).collect(Collectors.toList()).get(0)).thenReturn(train);
+		when(trainRepository.findAll().stream().collect(Collectors.toList()).get(0)).thenReturn(train);
 		Train actualtrain=trainService.getTrainByTrainNo("id");
 		assertThat(train).isEqualTo(actualtrain);
 	}
@@ -85,6 +87,8 @@ class TrainServiceTest {
 		Train train= new Train();
 		train.setQuota("GENERAL");
 		train.setDepatureTime(LocalTime.of(7, 30, 00));
+		
+		when(trainService.updateTrain(train, train.getTrainNo())).thenReturn(train);
 		
 		Train actualTrain=trainService.updateTrain(train,train.getTrainNo());
 		Train excpetedTrain=new Train();
