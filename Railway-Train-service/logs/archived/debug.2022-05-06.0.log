@@ -1,0 +1,266 @@
+2022-05-06 00:09:12 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 00:09:12 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 00:09:57 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 00:09:57 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 00:32:24 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 9032 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-06 00:32:25 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 00:32:25 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 00:32:41 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 18.134 seconds (JVM running for 22.384)
+2022-05-06 00:32:54 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 00:32:54 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 01:01:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 01:01:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 01:06:05 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 01:06:05 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 01:06:48 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 01:06:48 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 01:07:44 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:07:49 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:10:05 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:10:49 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:11:57 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:13:20 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:14:10 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:14:17 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:15:15 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:16:02 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:22:19 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:23:48 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:24:12 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:25:34 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:25:45 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:26:37 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 01:30:26 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:37:14 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:37:50 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:45:40 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:46:31 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:47:34 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:48:26 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:50:00 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:51:51 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:52:30 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 02:57:48 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:02:42 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:03:46 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:04:07 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:05:20 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:06:33 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:07:01 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:07:43 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:10:19 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:11:52 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:12:49 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:13:23 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:13:24 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:14:06 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:14:29 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:14:48 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:15:21 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:15:31 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:18:16 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 03:50:13 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 05:05:23 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:05:23 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:06:41 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:06:41 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:13:05 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:13:05 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:17:34 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:17:39 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:17:39 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:17:39 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:21:44 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:21:44 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:21:44 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:21:44 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:21:46 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:21:46 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:22:36 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:22:37 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:22:37 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:22:37 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:22:37 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:22:37 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:23:19 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:23:19 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:23:19 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:23:19 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:23:19 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:23:19 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:38:12 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:38:12 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:38:12 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:38:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:38:13 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:38:13 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:38:13 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:38:13 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:39:39 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:39:39 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:39:39 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				saving train data in DB
+2022-05-06 05:39:39 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Saved in db
+2022-05-06 05:39:40 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:39:40 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 05:39:41 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 05:39:41 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 20:06:02 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 5332 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-06 20:06:02 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 20:06:02 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 20:06:20 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 18.539 seconds (JVM running for 19.303)
+2022-05-06 20:09:44 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:14:56 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:15:31 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:32:10 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:43:39 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:44:31 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:49:35 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 20:58:39 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 21:02:31 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 21:03:42 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 21:03:49 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 21:07:47 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 21:18:53 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between undefined and undefined
+2022-05-06 23:54:17 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 9368 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-06 23:54:17 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 23:54:17 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 23:54:59 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 44.275 seconds (JVM running for 47.025)
+2022-05-06 23:58:00 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 23:58:00 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-06 23:58:42 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-06 23:58:42 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-06 23:58:46 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-06 23:58:46 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai

@@ -1,24 +1,24 @@
-2022-05-03 19:35:44 [main] INFO  main.RailwayTrainServiceApplication -
-				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 2264 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
-2022-05-03 19:35:44 [main] DEBUG main.RailwayTrainServiceApplication -
+2022-05-07 00:00:27 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 13104 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-07 00:00:27 [main] DEBUG main.RailwayTrainServiceApplication -
 				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-05-03 19:35:44 [main] INFO  main.RailwayTrainServiceApplication -
+2022-05-07 00:00:27 [main] INFO  main.RailwayTrainServiceApplication -
 				No active profile set, falling back to 1 default profile: "default"
-2022-05-03 19:35:54 [main] INFO  main.RailwayTrainServiceApplication -
-				Started RailwayTrainServiceApplication in 11.561 seconds (JVM running for 12.937)
-2022-05-03 19:40:43 [http-nio-1111-exec-1] INFO  main.service.TrainService -
-				checking if its empty or not
-2022-05-03 19:40:43 [http-nio-1111-exec-1] INFO  main.service.TrainService -
-				Not empty and return list of trains
-2022-05-03 19:40:55 [http-nio-1111-exec-2] INFO  main.service.TrainService -
-				checking if its empty or not
-2022-05-03 19:40:55 [http-nio-1111-exec-2] INFO  main.service.TrainService -
-				Not empty and return list of trains
-2022-05-03 19:41:05 [http-nio-1111-exec-3] INFO  main.service.TrainService -
-				checking if its empty or not
-2022-05-03 19:41:05 [http-nio-1111-exec-3] INFO  main.service.TrainService -
-				Not empty and return list of trains
-2022-05-03 19:41:12 [http-nio-1111-exec-4] INFO  main.service.TrainService -
-				checking if its empty or not
-2022-05-03 19:41:12 [http-nio-1111-exec-4] INFO  main.service.TrainService -
-				Not empty and return list of trains
+2022-05-07 00:00:38 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 12.148 seconds (JVM running for 14.151)
+2022-05-07 00:00:59 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-07 00:00:59 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-07 00:01:36 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 6780 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-07 00:01:36 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-07 00:01:36 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-07 00:01:41 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 5.844 seconds (JVM running for 6.556)
+2022-05-07 00:02:23 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-07 00:02:23 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
