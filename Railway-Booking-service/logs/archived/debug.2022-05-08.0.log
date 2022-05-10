@@ -1,0 +1,24 @@
+2022-05-08 00:52:07 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 468 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-08 00:52:07 [main] DEBUG m.RailwayBookingServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-08 00:52:07 [main] INFO  m.RailwayBookingServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-08 00:53:00 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 53.622 seconds (JVM running for 55.069)
+2022-05-08 12:54:48 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 11760 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-08 12:54:48 [main] DEBUG m.RailwayBookingServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-08 12:54:48 [main] INFO  m.RailwayBookingServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-08 12:54:58 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 11.127 seconds (JVM running for 12.088)
+2022-05-08 23:25:22 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 11952 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-08 23:25:22 [main] DEBUG m.RailwayBookingServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-08 23:25:22 [main] INFO  m.RailwayBookingServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-08 23:25:30 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 9.121 seconds (JVM running for 10.149)

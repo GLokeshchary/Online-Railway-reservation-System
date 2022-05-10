@@ -1,8 +1,32 @@
-2022-05-03 19:36:20 [main] INFO  m.RailwayBookingServiceApplication -
-				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 13048 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
-2022-05-03 19:36:20 [main] DEBUG m.RailwayBookingServiceApplication -
+2022-05-09 02:08:53 [http-nio-3333-exec-1] INFO  main.service.BookingService -
+				getting train with17221with help of train service
+2022-05-09 02:08:58 [http-nio-3333-exec-1] INFO  main.service.BookingService -
+				generating a random pnr
+2022-05-09 02:14:41 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 12200 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-09 02:14:41 [main] DEBUG m.RailwayBookingServiceApplication -
 				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-05-03 19:36:20 [main] INFO  m.RailwayBookingServiceApplication -
+2022-05-09 02:14:41 [main] INFO  m.RailwayBookingServiceApplication -
 				No active profile set, falling back to 1 default profile: "default"
-2022-05-03 19:36:29 [main] INFO  m.RailwayBookingServiceApplication -
-				Started RailwayBookingServiceApplication in 10.829 seconds (JVM running for 12.152)
+2022-05-09 02:14:48 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 8.47 seconds (JVM running for 9.283)
+2022-05-09 02:15:21 [http-nio-3333-exec-1] INFO  main.service.BookingService -
+				getting train with17221with help of train service
+2022-05-09 02:15:22 [http-nio-3333-exec-1] INFO  main.service.BookingService -
+				generating a random pnr
+2022-05-09 02:15:53 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 12912 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-09 02:15:53 [main] DEBUG m.RailwayBookingServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-09 02:15:53 [main] INFO  m.RailwayBookingServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-09 02:15:58 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 6.077 seconds (JVM running for 6.769)
+2022-05-09 02:17:57 [main] INFO  m.RailwayBookingServiceApplication -
+				Starting RailwayBookingServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 13056 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Booking-service)
+2022-05-09 02:17:57 [main] DEBUG m.RailwayBookingServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-09 02:17:57 [main] INFO  m.RailwayBookingServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-09 02:18:03 [main] INFO  m.RailwayBookingServiceApplication -
+				Started RailwayBookingServiceApplication in 5.882 seconds (JVM running for 6.526)

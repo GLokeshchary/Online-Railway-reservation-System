@@ -1,0 +1,17 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: SECURITY-SERVICE
+  data:
+    mongodb:
+      uri: mongodb+srv://lokesh:Loki@myfirstcluster.gxv9p.mongodb.net/Credentials
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
