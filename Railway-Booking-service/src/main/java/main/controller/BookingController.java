@@ -16,13 +16,17 @@ import org.springframework.web.bind.annotation.RestController;
 import main.exception.InvalidCoachNameException;
 import main.exception.InvalidPNRException;
 import main.exception.NoSuchBookingsException;
+import main.exception.PassengersNotFoundException;
 import main.exception.TicketNotFoundException;
 import main.models.BookedTicket;
 import main.models.Bookings;
+import main.models.Passenger;
+import main.models.ListOfPassengers;
 import main.models.PassengersList;
 import main.models.Ticket;
+import main.models.bookTicket;
 import main.service.BookingService;
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/customer")
 public class BookingController {
@@ -46,7 +50,7 @@ public class BookingController {
 		bookings.setBookedTickets(list);
 		return bookings;
 	}
-	
+	/*
 	// GET ALL PASSENGERS TICKETS
 	
 	@GetMapping("/getAllPassengersTicket")
@@ -70,20 +74,30 @@ public class BookingController {
 	public Ticket getPassengersTicketByPNR(@PathVariable long pnr) throws InvalidPNRException {
 		return bookingService.getPassengersTicketByPNR(pnr);
 	}
-	
+	*/
 	// BOOKING A TRAIN WITH PARTCULAR TRAIN NO AND CLASS (SL,AC1,AC2...)
 	
 	@PostMapping("/bookTicketByTrainNo/{trainNo}/{coachName}")
-	public BookedTicket bookTicketByTrainNo(@PathVariable String trainNo,@RequestBody BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException {
+	public BookedTicket bookTicketByTrainNo(@PathVariable String trainNo,@RequestBody BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
 		
 		return bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName);
 		
 	}
 	
+	// FOR ANGULAR CONNECTION
+	
+	@PostMapping("/bookTicketByTrainNo2/{trainNo}/{coachName}")
+	public bookTicket AngularBookTicketByTrainNo(@PathVariable String trainNo,@RequestBody bookTicket bookTicket, BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
+		
+		 bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName);
+		 return bookTicket;
+		
+	}
+	
 	// GET BOOKING TICKETS WITH BOOK ID
 	
-	@GetMapping("/bookedTicketByBookId/{bookId}")
-	public BookedTicket bookedTicketByBookId(@PathVariable String bookId) throws NoSuchBookingsException {
+	@GetMapping("/getbookedTicketByBookId/{bookId}")
+	public BookedTicket getbookedTicketByBookId(@PathVariable String bookId) throws NoSuchBookingsException {
 		
 		return bookingService.bookedTicketByBookId(bookId);
 	}
@@ -104,5 +118,35 @@ public class BookingController {
 		return bookingService.deleteBookedTicketByBookId(bookId);
 	}
 	
+	// POST PASSENGER IN DATABASE
+	
+	@PostMapping("/savePassenger")
+	public Passenger savePassenger(@RequestBody Passenger passenger) {
+		return bookingService.savePassenger(passenger);
+	}
+	
+	// GET ALL PASSENGER LIST
+	
+	@GetMapping("/getAllPassengers")
+	public List<Passenger> getAllPassengers() throws PassengersNotFoundException{
+		return bookingService.getAllPassengers();
+	}
+	
+	// FOR RESTTEMPLATE PURPOSE
+	
+	@GetMapping("/findAllPassengers")
+	public ListOfPassengers findAllPassengers() throws PassengersNotFoundException {
+		List<Passenger> passengerslist = bookingService.getAllPassengers();
+		ListOfPassengers dto=new ListOfPassengers();
+		dto.setPassengers(passengerslist);
+		return dto;
+	}
+	
+	// DELETE ALL THE PASSENGERS LIST
+	
+	@DeleteMapping("/deleteAllPassengerList")
+	public String deleteAllPassengerList() {
+		return bookingService.deleteAllPassengerList();
+	}
 
 }

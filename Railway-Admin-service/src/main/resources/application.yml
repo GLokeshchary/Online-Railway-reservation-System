@@ -8,6 +8,7 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://lokesh:Loki@myfirstcluster.gxv9p.mongodb.net/CaseStudy
+
 eureka:
   client:
     register-with-eureka: true
@@ -16,6 +17,14 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+   
+logging:
+  level:
+    main: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+      
     
 springdoc:
   swagger-ui:
@@ -27,11 +36,5 @@ springdoc:
   - main
   paths-to-match:
   - /**
-  
-logging:
-  level:
-    main: DEBUG
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
 

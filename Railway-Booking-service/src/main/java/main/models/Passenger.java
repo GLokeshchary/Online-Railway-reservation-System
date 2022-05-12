@@ -12,8 +12,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "Passengers")
 public class Passenger {
-	
+	@Id
 	private String passengerId;
     private String passenger_name;
     private int age;

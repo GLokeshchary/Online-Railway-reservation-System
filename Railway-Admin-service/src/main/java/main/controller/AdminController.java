@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ import main.models.Bookings;
 import main.models.PassengersList;
 import main.models.Train;
 import main.service.AdminService;
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class AdminController {
 	

@@ -1,0 +1,220 @@
+2022-05-10 03:09:45 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 13380 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-10 03:09:45 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 03:09:45 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 03:10:09 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 25.014 seconds (JVM running for 50.503)
+2022-05-10 06:39:34 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 14872 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-10 06:39:34 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 06:39:34 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 06:39:55 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 24.259 seconds (JVM running for 27.94)
+2022-05-10 06:52:34 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-10 06:52:34 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-10 06:52:41 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking train with
+2022-05-10 06:52:41 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				get train with
+2022-05-10 07:20:43 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 07:20:43 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 07:22:41 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 07:22:41 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:49:00 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:49:01 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:49:23 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:49:23 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:50:24 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:50:24 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:51:44 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:51:44 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:51:56 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:51:56 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:52:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:52:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:52:13 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:52:13 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:53:32 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:53:32 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:56:28 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:56:28 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:56:50 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:56:50 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 09:56:53 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 09:56:53 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:05:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:05:13 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:05:39 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:05:39 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:05:53 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:05:53 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:06:12 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:06:12 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:07:43 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:07:43 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:08:19 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:08:19 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:09:15 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:09:15 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:11:40 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:11:40 [http-nio-1111-exec-10] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:12:48 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:12:48 [http-nio-1111-exec-2] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:13:07 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:13:07 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:13:14 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:13:14 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:15:25 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:15:25 [http-nio-1111-exec-7] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:15:36 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:15:36 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:17:45 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:17:45 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:19:12 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:19:12 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:20:41 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:20:41 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:30:06 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:30:06 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:32:01 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:32:01 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:33:33 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:33:33 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:35:14 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:35:14 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:35:59 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:35:59 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:36:27 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:36:27 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:36:48 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:36:48 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:37:01 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:37:01 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 10:37:09 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 10:37:09 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 12:30:06 [main] INFO  main.RailwayTrainServiceApplication -
+				Starting RailwayTrainServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 696 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Train-service)
+2022-05-10 12:30:06 [main] DEBUG main.RailwayTrainServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 12:30:06 [main] INFO  main.RailwayTrainServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 12:30:15 [main] INFO  main.RailwayTrainServiceApplication -
+				Started RailwayTrainServiceApplication in 9.228 seconds (JVM running for 10.102)
+2022-05-10 13:01:52 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 13:01:52 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 13:17:45 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 13:17:45 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 13:18:21 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 13:18:21 [http-nio-1111-exec-4] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 13:32:36 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 13:32:36 [http-nio-1111-exec-6] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 15:11:12 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-10 15:11:13 [http-nio-1111-exec-8] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai
+2022-05-10 15:11:19 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				checking train with
+2022-05-10 15:11:19 [http-nio-1111-exec-9] INFO  main.service.TrainService -
+				get train with
+2022-05-10 15:24:04 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				checking train with
+2022-05-10 15:24:04 [http-nio-1111-exec-1] INFO  main.service.TrainService -
+				get train with
+2022-05-10 15:42:32 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				checking if its empty or not
+2022-05-10 15:42:32 [http-nio-1111-exec-3] INFO  main.service.TrainService -
+				Not empty and return list of trains
+2022-05-10 16:59:55 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				checking trains between Hyderabad and Mumbai
+2022-05-10 16:59:55 [http-nio-1111-exec-5] INFO  main.service.TrainService -
+				getting list of trains between Hyderabad and Mumbai

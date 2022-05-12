@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import main.exception.InvalidTrainNoException;
 import main.exception.NoTrainExistException;
 import main.exception.StationNotExistException;
+import main.models.Seat;
 import main.models.Train;
 import main.models.Trains;
+import main.models.Values;
 import main.service.TrainService;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -92,6 +94,14 @@ public class TrainController {
 	@PutMapping("/public/updateTrainByTrainNo/{trainNo}")
 	public Train updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
 		 return trainService.updateTrain(train,trainNo);
+	}
+	
+	// PASSING VALUES TO ANGULAR
+	
+	@GetMapping("/public/getPriceByTrainNo/{trainNo}/{coach}")
+	public Values getPriceByTrainNo(@PathVariable String trainNo,@PathVariable String coach) {
+		return trainService.getPriceByTrainNo(trainNo,coach);
+		
 	}
 	
 	

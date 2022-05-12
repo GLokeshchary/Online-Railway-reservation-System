@@ -1,0 +1,34 @@
+2022-05-10 09:17:29 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 14372 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-10 09:17:29 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 09:17:29 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 09:18:15 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 61.462 seconds (JVM running for 86.539)
+2022-05-10 10:23:00 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 1352 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-10 10:23:00 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 10:23:00 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 10:23:31 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 32.499 seconds (JVM running for 34.0)
+2022-05-10 12:31:31 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 6580 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-10 12:31:31 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-10 12:31:31 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-10 12:31:37 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 6.749 seconds (JVM running for 7.534)
+2022-05-10 13:00:27 [http-nio-2222-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-10 13:17:44 [http-nio-2222-exec-5] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-10 13:18:21 [http-nio-2222-exec-2] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-10 13:32:36 [http-nio-2222-exec-9] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-10 15:42:25 [http-nio-2222-exec-6] INFO  main.service.AdminService -
+				getting list of trains from train service

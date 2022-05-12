@@ -13,7 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import main.exception.InvalidTrainNoException;
 import main.exception.NoTrainExistException;
 import main.exception.StationNotExistException;
+import main.models.Seat;
 import main.models.Train;
+import main.models.Values;
 import main.repository.TrainRepository;
 
 @Service
@@ -111,6 +113,17 @@ public class TrainService {
 		log.info("get train with",trainNo);
 		
 		return trainlist.stream().filter(data->data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).get(0);
+	}
+	
+	// PASSING VALUES TO ANGULAR
+
+	public Values getPriceByTrainNo(String trainNo, String coach) {
+		Train train = this.getTrainByTrainNo(trainNo);
+		Seat seat = train.getClasses().get(coach);
+		System.out.println(seat);
+		Values values=new Values();
+		values.setPrice(seat.getPrice());
+		return values;
 	}
 	
 	

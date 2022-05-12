@@ -1,0 +1,132 @@
+2022-05-06 05:04:09 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 12468 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:04:09 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:04:09 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:04:20 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 12.196 seconds (JVM running for 14.783)
+2022-05-06 05:05:10 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 8588 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:05:10 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:05:10 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:05:18 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.494 seconds (JVM running for 10.239)
+2022-05-06 05:05:20 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:06:32 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 15044 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:06:32 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:06:32 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:06:40 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.671 seconds (JVM running for 10.734)
+2022-05-06 05:06:41 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:08:55 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 8088 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:08:55 [main] DEBUG main.RailwayAdminServiceApplication -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:08:55 [main] INFO  main.RailwayAdminServiceApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:09:02 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 7.544 seconds (JVM running for 8.416)
+2022-05-06 05:12:55 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 13928 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:12:55 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:12:55 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:13:03 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.558 seconds (JVM running for 10.522)
+2022-05-06 05:13:04 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:17:21 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 7620 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:17:21 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:17:21 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:17:29 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.589 seconds (JVM running for 10.434)
+2022-05-06 05:17:30 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:17:39 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:21:33 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 15100 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:21:33 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:21:33 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:21:43 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 9.872 seconds (JVM running for 11.611)
+2022-05-06 05:21:43 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:21:44 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:21:44 [http-nio-auto-1-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:22:27 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 11016 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:22:27 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:22:27 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:22:35 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.633 seconds (JVM running for 10.459)
+2022-05-06 05:22:36 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:22:37 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:22:37 [http-nio-auto-1-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:23:10 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 15224 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:23:10 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:23:10 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:23:18 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 9.024 seconds (JVM running for 11.351)
+2022-05-06 05:23:19 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:23:19 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:23:19 [http-nio-auto-1-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:38:02 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 15292 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:38:02 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:38:02 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:38:10 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.869 seconds (JVM running for 10.569)
+2022-05-06 05:38:12 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:38:12 [http-nio-auto-1-exec-3] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:38:13 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:38:13 [http-nio-auto-1-exec-5] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:39:30 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Starting RailwayAdminServiceApplicationTests using Java 17.0.1 on DESKTOP-DJEPOOM with PID 10248 (started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-06 05:39:30 [main] DEBUG m.RailwayAdminServiceApplicationTests -
+				Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-06 05:39:30 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				No active profile set, falling back to 1 default profile: "default"
+2022-05-06 05:39:38 [main] INFO  m.RailwayAdminServiceApplicationTests -
+				Started RailwayAdminServiceApplicationTests in 8.198 seconds (JVM running for 9.795)
+2022-05-06 05:39:39 [http-nio-auto-1-exec-1] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:39:39 [http-nio-auto-1-exec-2] INFO  main.service.AdminService -
+				saving a train through admin service
+2022-05-06 05:39:39 [http-nio-auto-1-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-06 05:39:40 [http-nio-auto-1-exec-4] INFO  main.service.AdminService -
+				getting list of trains from train service
