@@ -45,6 +45,12 @@ public class TrainController {
 		
 	}
 	
+	// SAVE TRAIN WITH ANGULAR
+	@PostMapping("/public/createTrain")
+	public Train createTrain(@RequestBody Train train) {
+		return trainService.createTrain(train);
+	}
+	
 	// GET ALL THE TRAINS FROM DATABASE
 	
 	@GetMapping("/public/getAllTrains")
@@ -101,6 +107,14 @@ public class TrainController {
 	@GetMapping("/public/getPriceByTrainNo/{trainNo}/{coach}")
 	public Values getPriceByTrainNo(@PathVariable String trainNo,@PathVariable String coach) {
 		return trainService.getPriceByTrainNo(trainNo,coach);
+		
+	}
+	
+	// SAVE SEAT ACCORDING TO TRAINNO AND COACH NAME
+	
+	@PostMapping("/public/saveSeatByTrainNo&Coach/{trainNo}/{coach}")
+	public Seat saveSeatByTrainNoCoach(@RequestBody Seat seat, @PathVariable String trainNo,@PathVariable String coach) {
+		return trainService.saveSeatByTrainNoCoach(seat,trainNo,coach);
 		
 	}
 	

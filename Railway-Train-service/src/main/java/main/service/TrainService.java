@@ -1,10 +1,13 @@
 package main.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -16,6 +19,7 @@ import main.exception.StationNotExistException;
 import main.models.Seat;
 import main.models.Train;
 import main.models.Values;
+import main.repository.SeatRepository;
 import main.repository.TrainRepository;
 
 @Service
@@ -28,9 +32,13 @@ public class TrainService {
 	@Autowired
 	TrainRepository trainRepository;
 	
+	@Autowired
+	private SeatRepository seatRepository;
+	
 	// SAVE A TRAIN IN DATABASE
 
 	public Train addTrain(Train train) {
+		
 		
 		log.info("saving train data in DB");
 		trainRepository.save(train);
@@ -38,6 +46,18 @@ public class TrainService {
 		return train;
 		
 		
+	}
+	
+	// SAVE TRAIN WITH ANGULAR
+	
+	public Train createTrain(Train train) {
+		Map<String, Seat> map=new HashMap<>();
+		map.put("SLEEPER(SL)", this.getSeatByTrainNoCoach(train.getTrainNo(), "SLEEPER(SL)"));
+		map.put("AC 3 Tier(2A)", this.getSeatByTrainNoCoach(train.getTrainNo(),"AC 3 Tier(2A)"));
+		map.put("AC 2 Tier(3A)", this.getSeatByTrainNoCoach(train.getTrainNo(),"AC 2 Tier(3A)"));
+		train.setClasses(map);
+		trainRepository.save(train);
+		return train;
 	}
 	
 	// GET ALL THE TRAINS FROM DATABASE
@@ -124,6 +144,17 @@ public class TrainService {
 		Values values=new Values();
 		values.setPrice(seat.getPrice());
 		return values;
+	}
+
+	public Seat saveSeatByTrainNoCoach(Seat seat,String trainNo, String coach) {
+		
+		seat.setTrainNo(trainNo);
+		seat.setCoach(coach);
+		return seatRepository.save(null);
+	}
+	
+	public Seat getSeatByTrainNoCoach(String trainNo,String coach) {
+		return seatRepository.findAll().stream().filter(data->data.getCoach().equalsIgnoreCase(coach) && data.getTrainNo().equals(trainNo)).collect(Collectors.toList()).get(0);
 	}
 	
 	

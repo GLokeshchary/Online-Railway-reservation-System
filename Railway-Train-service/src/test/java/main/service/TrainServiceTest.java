@@ -20,18 +20,20 @@ import org.junit.jupiter.api.Test;
 import main.exception.InvalidTrainNoException;
 import main.exception.NoTrainExistException;
 import main.models.Train;
+import main.repository.SeatRepository;
 import main.repository.TrainRepository;
 
 class TrainServiceTest {
 	
 	private TrainRepository trainRepository;
+	private SeatRepository seatRepository;
 	
 	private TrainService trainService;
 
 	@BeforeEach
 	void setUp() throws Exception {
 		trainRepository=mock(TrainRepository.class);
-		trainService=new TrainService(trainRepository);
+		trainService=new TrainService(trainRepository,seatRepository);
 	}
 
 	@Test
