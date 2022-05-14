@@ -142,11 +142,32 @@ public class BookingController {
 		return dto;
 	}
 	
+	// UPDATE A PASSENGER BY ID
+	
+	@PutMapping("/updatePassengerById/{passengerid}")
+	public Passenger updatePassengerById(@PathVariable String passengerid,@RequestBody Passenger passenger) throws PassengersNotFoundException {
+		return bookingService.updatePassengerById(passengerid,passenger);
+	}
+	
+	// DELETE PASSEN0GER BY ID
+	
+	@DeleteMapping("/deletePassengerById/{passengerid}")
+	public String deletePassengerById(@PathVariable String passengerid) {
+		return bookingService.deletePassengerById(passengerid);
+	}
+	
 	// DELETE ALL THE PASSENGERS LIST
 	
 	@DeleteMapping("/deleteAllPassengerList")
 	public String deleteAllPassengerList() {
 		return bookingService.deleteAllPassengerList();
+	}
+	
+	// GET PASSENGER BY ID
+	
+	@GetMapping("/getPassengerById/{passengerid}")
+	public Passenger getPassengerById(@PathVariable String passengerid) {
+		return bookingService.getPassengerById(passengerid);
 	}
 
 }

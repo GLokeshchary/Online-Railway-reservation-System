@@ -3,6 +3,7 @@ package main.service;
 import java.io.InputStream;
 //import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -233,6 +234,44 @@ public class BookingService {
 			String coachName) {
 		restTemplate.postForObject(null, coachName, null);
 		
+	}
+	
+	// UPDATE PASSENGER BY ID
+
+	public Passenger updatePassengerById(String passengerid,Passenger passenger) throws PassengersNotFoundException {
+		log.info("getting Passenger by",passengerid);
+		passenger=passengerRepository.findById(passengerid).get();
+		log.info("checking if its null or not");
+		if(passenger==null) {
+			throw new PassengersNotFoundException("Passenger with passenger with"+passengerid+"not found");
+		}
+		log.info("Not null and saving in db");
+		passengerRepository.save(passenger);
+		log.info("edited");
+		return passenger;
+	}
+	
+	// DELETE ALL THE PASSENGERS LIST
+
+	public String deletePassengerById(String passengerid) {
+		log.info("deleting passenger by ",passengerid);
+		passengerRepository.deleteById(passengerid);
+		return "DELETED SUCCESSFULLY";
+	}
+	
+	// GET PASSENGER BY ID
+
+	public Passenger getPassengerById(String passengerid) {
+		try {
+			log.info("Getting passenger by",passengerid);
+			passengerRepository.findById(passengerid);
+			
+			throw new PassengersNotFoundException("Passenger Not found");
+		}
+		catch (PassengersNotFoundException e) {
+			log.error("Passenger Not Found ",e.getMessage());
+		}
+		return null;
 	}
 
 }
