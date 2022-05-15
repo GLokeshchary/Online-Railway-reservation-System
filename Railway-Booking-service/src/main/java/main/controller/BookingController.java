@@ -94,20 +94,20 @@ public class BookingController {
 		
 	}
 	
-	// GET BOOKING TICKETS WITH BOOK ID
+	// GET BOOKING TICKETS WITH PNR
 	
-	@GetMapping("/getbookedTicketByBookId/{bookId}")
-	public BookedTicket getbookedTicketByBookId(@PathVariable String bookId) throws NoSuchBookingsException {
+	@GetMapping("/getbookedTicketByBookId/{pnr}")
+	public BookedTicket getbookedTicketByBookId(@PathVariable Long pnr) throws NoSuchBookingsException {
 		
-		return bookingService.bookedTicketByBookId(bookId);
+		return bookingService.bookedTicketByBookId(pnr);
 	}
 	
-	// UPDATE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
+	// UPDATE BOOKING WITH PNR (FOR PAYTM MICROSERVICE)
 	
-	@PutMapping("/updateBookedTicketByBookId/{bookId}")
-	public BookedTicket updateBookedTicketByBookId(@PathVariable String bookId,@RequestBody BookedTicket bookedTicket) throws NoSuchBookingsException {
+	@PutMapping("/updateBookedTicketByBookId/{pnr}")
+	public BookedTicket updateBookedTicketByBookId(@PathVariable Long pnr,@RequestBody BookedTicket bookedTicket) throws NoSuchBookingsException {
 		
-		return bookingService.updateBookedTicketByBookId(bookId,bookedTicket);
+		return bookingService.updateBookedTicketByBookId(pnr,bookedTicket);
 	}
 	
 	// DELETE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)

@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Values {
 	private double price;
+	private int avaliableSeats;
 
 }

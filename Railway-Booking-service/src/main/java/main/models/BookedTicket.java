@@ -30,7 +30,7 @@ public class BookedTicket {
     private String quota;
     private Long transactional_id;
     private Long account_no;
-    private String email_address;
+    private String email;
     private String status;
     private LocalDateTime booking_time;
     private double amount;

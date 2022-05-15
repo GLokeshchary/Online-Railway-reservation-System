@@ -1,6 +1,7 @@
 package main.service;
 
 import java.io.InputStream;
+import java.time.LocalDateTime;
 //import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -99,13 +100,9 @@ public class BookingService {
 		Seat seat = train.getClasses().get(coachName);
 		double amountPerSeat = seat.getPrice();
 
-		// from payment
-		/*
-		 * bookedTicket.setTransactional_id(04L); bookedTicket.setAccount_no(14L);
-		 * bookedTicket.setEmail_address("lokesh@gmail.com");
-		 * bookedTicket.setStatus("confirmed");
-		 * bookedTicket.setBooking_time(LocalDateTime.now());
-		 */
+		 bookedTicket.setTransactional_id(04L); bookedTicket.setAccount_no(14L);
+		 bookedTicket.setBooking_time(LocalDateTime.now());
+		
 
 		double size = bookedTicket.getPassengers().size();
 		bookedTicket.setAmount(amountPerSeat * size);
@@ -149,34 +146,34 @@ public class BookingService {
 
 	}*/
 
-	// GET BOOKING TICKETS WITH BOOKING ID
+	// GET BOOKING TICKETS WITH PNR
 
-	public BookedTicket bookedTicketByBookId(String bookId) throws NoSuchBookingsException {
+	public BookedTicket bookedTicketByBookId(Long pnr) throws NoSuchBookingsException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
-		log.info("checking if its matches with "+ bookId+"or not");
-		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
-			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
+		log.info("checking if its matches with "+ pnr+"or not");
+		if (bookedTickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
+			throw new NoSuchBookingsException("BOOKING WITH" + pnr + "DOES NOT EXIST");
 		}
 		log.info("return list of bookedtickets");
-		return bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
+		return bookedTickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList())
 				.get(0);
 	}
 
 	// UPDATE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
 
-	public BookedTicket updateBookedTicketByBookId(String bookId, BookedTicket bookedTicket) throws NoSuchBookingsException {
+	public BookedTicket updateBookedTicketByBookId(Long pnr, BookedTicket bookedTicket) throws NoSuchBookingsException {
 
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
-		log.info("checking if its matches with "+ bookId+"or not");
-		if (bookedTickets.stream().noneMatch(data -> data.getBookId().equals(bookId))) {
-			throw new NoSuchBookingsException("BOOKING WITH" + bookId + "DOES NOT EXIST");
+		log.info("checking if its matches with "+ pnr+"or not");
+		if (bookedTickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
+			throw new NoSuchBookingsException("BOOKING WITH" + pnr + "DOES NOT EXIST");
 		}
-		bookedTicket= bookedTickets.stream().filter(data -> data.getBookId().equals(bookId)).collect(Collectors.toList())
+		bookedTicket= bookedTickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList())
 				.get(0);
 		
-		log.info("updating booking with ",bookId);
+		log.info("updating booking with ",pnr);
 		return bookedTicket;
 	}
 	
