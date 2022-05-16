@@ -48,6 +48,9 @@ public class BookingService {
 
 	@Autowired
 	private RestTemplate restTemplate;
+	
+	@Autowired
+	private EmailService emailService;
 
 	// FIND ALL THE BOOKINGS
 
@@ -76,7 +79,7 @@ public class BookingService {
 
 	// BOOKING A TICKET
 
-	public BookedTicket bookTicketByTrainNo(String trainNo, BookedTicket bookedTicket, String coachName)
+	public BookedTicket bookTicketByTrainNo(String trainNo, BookedTicket bookedTicket, String coachName,String email)
 			throws InvalidCoachNameException, PassengersNotFoundException {
 		log.info("getting train with"+trainNo+"with help of train service");
 		Train train = restTemplate.getForObject("https://TRAIN-SERVICE/trains/public/getTrainByTrainNo/" + trainNo,
@@ -91,7 +94,7 @@ public class BookingService {
 		bookedTicket.setDeparture_time(train.getDepatureTime());
 		bookedTicket.setArrival_time(train.getArrivalTime());
 		bookedTicket.setQuota(train.getQuota());
-		
+		bookedTicket.setEmail(email);
 		List<Passenger>passengers=getAllPassengers();
 		bookedTicket.setPassengers(passengers);
 		if (!train.getClasses().containsKey(coachName)) {
@@ -100,55 +103,25 @@ public class BookingService {
 		Seat seat = train.getClasses().get(coachName);
 		double amountPerSeat = seat.getPrice();
 
-		 bookedTicket.setTransactional_id(04L); bookedTicket.setAccount_no(14L);
+		 
 		 bookedTicket.setBooking_time(LocalDateTime.now());
 		
 
 		double size = bookedTicket.getPassengers().size();
-		bookedTicket.setAmount(amountPerSeat * size);
+		bookedTicket.setAmount((amountPerSeat * size)+35.40+25.39);
 		bookedTicketRepository.save(bookedTicket);
 		log.info("tickets booked");
 		this.deleteAllPassengerList();
+		log.info("Sending email");
+		emailService.sendEmail(bookedTicket,email);
+		log.info("Email sended");
+		log.info("Saving booked ticket");
 		return bookedTicket;
 	}
 
-	// GET ALL PASEENGERS TICKETS
-
-	/*public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException {
-		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
-
-		log.info("getting list of passengers tikets from bookedticket");
-		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
-
-		log.info("checking if tickets empty or not");
-		if (tickets.isEmpty()) {
-			throw new TicketNotFoundException("TICKET NOT FOUND");
-		}
-		log.info("return list of tickets");
-		return tickets;
-	}
-
-	// GET PASSNGERS TICKET BY PNR
-
-	public Ticket getPassengersTicketByPNR(long pnr) throws InvalidPNRException {
-		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
-
-		
-		List<Ticket> tickets = bookedTickets.stream().map(data -> data.getTicket()).collect(Collectors.toList());
-
-		log.info("checking if its matching pnr or not");
-		if (tickets.stream().noneMatch(data -> data.getPnr().equals(pnr))) {
-			throw new InvalidPNRException();
-		}
-		
-		log.info("getting passengertickets by "+pnr);
-		return tickets.stream().filter(data -> data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
-
-	}*/
-
 	// GET BOOKING TICKETS WITH PNR
 
-	public BookedTicket bookedTicketByBookId(Long pnr) throws NoSuchBookingsException {
+	public BookedTicket bookedTicketByPNR(Long pnr) throws NoSuchBookingsException {
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
 		log.info("checking if its matches with "+ pnr+"or not");
@@ -162,7 +135,7 @@ public class BookingService {
 
 	// UPDATE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
 
-	public BookedTicket updateBookedTicketByBookId(Long pnr, BookedTicket bookedTicket) throws NoSuchBookingsException {
+	public BookedTicket updateBookedTicketByPNR(Long pnr, BookedTicket bookedTicket) throws NoSuchBookingsException {
 
 		List<BookedTicket> bookedTickets = bookedTicketRepository.findAll();
 
@@ -248,7 +221,7 @@ public class BookingService {
 		return passenger;
 	}
 	
-	// DELETE ALL THE PASSENGERS LIST
+	// DELETE  THE PASSENGER BY ID
 
 	public String deletePassengerById(String passengerid) {
 		log.info("deleting passenger by ",passengerid);
@@ -269,6 +242,14 @@ public class BookingService {
 			log.error("Passenger Not Found ",e.getMessage());
 		}
 		return null;
+	}
+
+	public boolean checkPnrExistsOrNot(Long pnr) {
+		List<BookedTicket> tickets = bookedTicketRepository.findAll();
+		if(tickets.stream().anyMatch(data->data.getPnr().equals(pnr))) {
+			return true;
+		}
+		return false;
 	}
 
 }

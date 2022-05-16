@@ -37,11 +37,11 @@ public class AdminService {
 
 	// UPDATE TRAIN IN THE TRAIN SERVICE USING REST TEMPLATE IN ADMIN SERVICE
 
-	public String updateTrain(Train train, String trainNo) {
+	public Train updateTrain(Train train, String trainNo) {
 
 		log.info("updating a train with"+trainNo+" through admin service");
 		restTemplate.put("https://TRAIN-SERVICE/trains/public/updateTrainByTrainNo/" + trainNo, train);
-		return "Updated Succesfully";
+		return train;
 	}
 
 	// DELETE TRAIN WITH TRAIN NO IN TRAIN SERVICE USING REST TEMPLATE

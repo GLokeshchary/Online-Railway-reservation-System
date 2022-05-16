@@ -28,7 +28,7 @@ public class BookedTicket {
     private LocalTime arrival_time;
     private List<Passenger> passengers;
     private String quota;
-    private Long transactional_id;
+    private String transactional_id;
     private Long account_no;
     private String email;
     private String status;

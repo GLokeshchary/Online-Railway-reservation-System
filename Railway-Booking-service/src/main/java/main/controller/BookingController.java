@@ -50,70 +50,46 @@ public class BookingController {
 		bookings.setBookedTickets(list);
 		return bookings;
 	}
-	/*
-	// GET ALL PASSENGERS TICKETS
 	
-	@GetMapping("/getAllPassengersTicket")
-	public List<Ticket> getAllPassengersTicket() throws TicketNotFoundException{
-		return bookingService.getAllPassengersTicket();
-	}
+	// BOOKING A TRAIN WITH PARTCULAR TRAIN NO AND CLASS (SL,AC1,AC2...) AND SENDING EMAIL
 	
-	// GET ALL PASSENGERS TICKETS FOR ADMIN SERVICE
-	
-	@GetMapping("/findAllPassengersTiket")
-	public PassengersList findAllPassengersTiket() throws TicketNotFoundException {
-		List<Ticket> list = bookingService.getAllPassengersTicket();
-		PassengersList passengersList=new PassengersList();
-		passengersList.setTickets(list);
-		return passengersList;
-	}
-	
-	// GET PASSENGERS TICKETS BY PNR
-	
-	@GetMapping("/getPassengersTicketByPNR/{pnr}")
-	public Ticket getPassengersTicketByPNR(@PathVariable long pnr) throws InvalidPNRException {
-		return bookingService.getPassengersTicketByPNR(pnr);
-	}
-	*/
-	// BOOKING A TRAIN WITH PARTCULAR TRAIN NO AND CLASS (SL,AC1,AC2...)
-	
-	@PostMapping("/bookTicketByTrainNo/{trainNo}/{coachName}")
-	public BookedTicket bookTicketByTrainNo(@PathVariable String trainNo,@RequestBody BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
+	@PostMapping("/bookTicketByTrainNo/{trainNo}/{coachName}/{email}")
+	public BookedTicket bookTicketByTrainNo(@PathVariable String trainNo,@PathVariable String email,@RequestBody BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
 		
-		return bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName);
+		return bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName,email);
 		
 	}
 	
 	// FOR ANGULAR CONNECTION
 	
 	@PostMapping("/bookTicketByTrainNo2/{trainNo}/{coachName}")
-	public bookTicket AngularBookTicketByTrainNo(@PathVariable String trainNo,@RequestBody bookTicket bookTicket, BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
+	public bookTicket AngularBookTicketByTrainNo(@PathVariable String trainNo,String email,@RequestBody bookTicket bookTicket, BookedTicket bookedTicket,@PathVariable String coachName) throws InvalidCoachNameException, PassengersNotFoundException {
 		
-		 bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName);
+		 bookingService.bookTicketByTrainNo(trainNo,bookedTicket,coachName,email);
 		 return bookTicket;
 		
 	}
 	
 	// GET BOOKING TICKETS WITH PNR
 	
-	@GetMapping("/getbookedTicketByBookId/{pnr}")
-	public BookedTicket getbookedTicketByBookId(@PathVariable Long pnr) throws NoSuchBookingsException {
+	@GetMapping("/getbookedTicketByPNR/{pnr}")
+	public BookedTicket getbookedTicketByPNR(@PathVariable Long pnr) throws NoSuchBookingsException {
 		
-		return bookingService.bookedTicketByBookId(pnr);
+		return bookingService.bookedTicketByPNR(pnr);
 	}
 	
 	// UPDATE BOOKING WITH PNR (FOR PAYTM MICROSERVICE)
 	
-	@PutMapping("/updateBookedTicketByBookId/{pnr}")
-	public BookedTicket updateBookedTicketByBookId(@PathVariable Long pnr,@RequestBody BookedTicket bookedTicket) throws NoSuchBookingsException {
+	@PutMapping("/updateBookedTicketByPNR/{pnr}")
+	public BookedTicket updateBookedTicketByPNR(@PathVariable Long pnr,@RequestBody BookedTicket bookedTicket) throws NoSuchBookingsException {
 		
-		return bookingService.updateBookedTicketByBookId(pnr,bookedTicket);
+		return bookingService.updateBookedTicketByPNR(pnr,bookedTicket);
 	}
 	
 	// DELETE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
 	
-	@DeleteMapping("/deleteBookedTicketByBookId/{bookId}")
-	public String deleteBookedTicketByBookId(@PathVariable String bookId) throws NoSuchBookingsException {
+	@DeleteMapping("/deleteBookedTicketByPNR/{pnr}")
+	public String deleteBookedTicketByPNR(@PathVariable String bookId) throws NoSuchBookingsException {
 		
 		return bookingService.deleteBookedTicketByBookId(bookId);
 	}
@@ -168,6 +144,14 @@ public class BookingController {
 	@GetMapping("/getPassengerById/{passengerid}")
 	public Passenger getPassengerById(@PathVariable String passengerid) {
 		return bookingService.getPassengerById(passengerid);
+	}
+	
+	// CHECK IF PNR EXISTS OR NOT
+	
+	@GetMapping("/checkPnrExistsOrNot/{pnr}")
+	public boolean checkPnrExistsOrNot(@PathVariable Long pnr) {
+		return bookingService.checkPnrExistsOrNot(pnr);
+		
 	}
 
 }

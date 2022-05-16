@@ -44,7 +44,7 @@ public class AdminController {
 	// UPDATE TRAIN IN THE TRAIN SERVICE USING REST TEMPLATE IN ADMIN SERVICE
 	
 	@PutMapping(value="/admin/updateTrainByTrainNo/{trainNo}")
-	public String updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
+	public Train updateTrainByTrainNo(@PathVariable String trainNo,@RequestBody Train train) {
 		return adminService.updateTrain(train,trainNo);
 	}
 	
@@ -55,18 +55,8 @@ public class AdminController {
 		return adminService.deleteTrainByTrainNo(trainNo);
 	}
 	
-	// GET ALL BOOKED TICKETS FROM BOOKING SERVICE
 	
-	@GetMapping("/admin/getAllBookings")
-	public Bookings findAllBookings() {
-		return adminService.findAllBookings();
-	}
 	
-	// GET ALL PASSENGERS LIST FROM BOOKING SERVICE
 	
-	@GetMapping("/admin/getAllPassengersTicket")
-	public PassengersList getAllPassengersTicket() {
-		return adminService.getAllPassengersTicket();
-	}
 
 }
