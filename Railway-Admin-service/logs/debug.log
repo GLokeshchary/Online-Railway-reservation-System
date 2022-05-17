@@ -1,8 +1,30 @@
-2022-05-13 12:44:15 [main] INFO  main.RailwayAdminServiceApplication -
-				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 400 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
-2022-05-13 12:44:15 [main] DEBUG main.RailwayAdminServiceApplication -
+2022-05-17 10:49:35 [main] INFO  main.RailwayAdminServiceApplication -
+				Starting RailwayAdminServiceApplication using Java 17.0.1 on DESKTOP-DJEPOOM with PID 12008 (C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service\target\classes started by APPLE in C:\Users\APPLE\git\Online-Railway-reservation-System\Railway-Admin-service)
+2022-05-17 10:49:35 [main] DEBUG main.RailwayAdminServiceApplication -
 				Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-05-13 12:44:15 [main] INFO  main.RailwayAdminServiceApplication -
+2022-05-17 10:49:35 [main] INFO  main.RailwayAdminServiceApplication -
 				No active profile set, falling back to 1 default profile: "default"
-2022-05-13 12:44:40 [main] INFO  main.RailwayAdminServiceApplication -
-				Started RailwayAdminServiceApplication in 26.399 seconds (JVM running for 28.736)
+2022-05-17 10:49:41 [main] INFO  main.RailwayAdminServiceApplication -
+				Started RailwayAdminServiceApplication in 7.013 seconds (JVM running for 10.181)
+2022-05-17 11:56:49 [http-nio-2222-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:02:56 [http-nio-2222-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:04:11 [http-nio-2222-exec-5] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:04:30 [http-nio-2222-exec-7] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:04:52 [http-nio-2222-exec-9] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:05:02 [http-nio-2222-exec-1] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:05:13 [http-nio-2222-exec-3] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:05:28 [http-nio-2222-exec-5] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:05:50 [http-nio-2222-exec-8] INFO  main.service.AdminService -
+				updating a train with17032 through admin service
+2022-05-17 12:05:52 [http-nio-2222-exec-9] INFO  main.service.AdminService -
+				getting list of trains from train service
+2022-05-17 12:05:57 [http-nio-2222-exec-10] INFO  main.service.AdminService -
+				getting list of trains from train service

@@ -86,12 +86,12 @@ public class BookingController {
 		return bookingService.updateBookedTicketByPNR(pnr,bookedTicket);
 	}
 	
-	// DELETE BOOKING WITH BOOK ID (FOR PAYTM MICROSERVICE)
+	// CANCEL BOOKING WITH PNR (FOR PAYTM MICROSERVICE)
 	
-	@DeleteMapping("/deleteBookedTicketByPNR/{pnr}")
-	public String deleteBookedTicketByPNR(@PathVariable String bookId) throws NoSuchBookingsException {
+	@PutMapping("/cancelBookedTicketByPNR/{pnr}/{email}")
+	public BookedTicket cancelBookedTicketByPNR(@PathVariable Long pnr,@PathVariable String email,@RequestBody BookedTicket bookedTicket) throws NoSuchBookingsException {
 		
-		return bookingService.deleteBookedTicketByBookId(bookId);
+		return bookingService.cancelBookedTicketByBookId(pnr,email,bookedTicket);
 	}
 	
 	// POST PASSENGER IN DATABASE

@@ -251,5 +251,19 @@ public class BookingService {
 		}
 		return false;
 	}
+	
+	//CANCEL THE TICKET BY PNR
+
+	public BookedTicket cancelBookedTicketByBookId(Long pnr, String email, BookedTicket bookedTicket) {
+		log.info("Checking if pnr exists or not");
+		bookedTicket=bookedTicketRepository.findAll().stream().filter(data->data.getPnr().equals(pnr)).collect(Collectors.toList()).get(0);
+		log.info("updating booked ticket");
+		bookedTicket.setStatus("Cancelled");
+		log.info("sending mail to ",email);
+		emailService.bookingCancelled(bookedTicket, email);
+		bookedTicketRepository.save(bookedTicket);
+		log.info("updated the ticket");
+		return bookedTicket;
+	}
 
 }
